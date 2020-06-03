@@ -1,7 +1,10 @@
+body {
+  background-color: #CAEBf2;
+}
 header {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 36px;
-  background-color: rgb(90, 104, 184);
+  background-color: #062F4F;
   color: rgb(200,200,200);
   text-align: center;
   padding: 0%;
@@ -11,22 +14,27 @@ header {
 p {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: aquamarine;
+  display: inline-block;
 }
 main {
-  background-color: bisque;
+  background-color: #D5D5D5;
   font-size: 20px;
 }
 q {
   font-style: italic;
-  color: rgb(63, 87, 221);
+  color: #B82601;
 }
 dfn {
   font-weight: 900;
   font-style: normal;
 }
 footer {
-  background-color: rgb(24, 24, 24);
+  background-color: rgb(63, 63, 63);
   color: rgb(200,200,200);
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+}
+.movies {
+  display:inline-block;
+  /* text-align: center; */
 }
