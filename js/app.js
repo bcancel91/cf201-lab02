@@ -112,25 +112,31 @@ function getAnswerFive(){
 
 getAnswerFive();
 
-// correctAnswerCount = 4
-// while (guessCount <= correctAnswerCount) {
-//   answerSix = prompt ('Okay ' + userName + ' how many answers did you get correct?', 'Answer with a number 1-8')
-//   if (answerSix == correctAnswerCount) { // I'm checking if their answer is the correctAnswerCount that incremented each correct answer
-//     alert ('You kept track too! Good job!'); // congratulations for keeping track of a random number
-//     correctAnswerCount++;
-//     guessCount+2;
-//     console.log(guessCount);
-//     break;
-//   } else if (answerSix > correctAnswerCount) { // I'm checking for the upper, above the correctAnswerCount
-//     alert ('Ah, too high!');
-//     guessCount++;
-//     console.log(guessCount);
-//   } else if (answerSix < correctAnswerCount) { // this is the catch for the lower end (the only numerical value that still remains)
-//     alert ('You underestimated your skill ' + userName + '!');
-//     guessCount++;
-//     console.log(guessCount);
-//   }
-// }
+correctAnswerCount = 4 //stand in for correct lab procedure
+
+function userCorrect(){
+  while (guessCount <= correctAnswerCount) {
+    answerSix = prompt ('Okay ' + userName + ' how many answers did you get correct?', 'Answer with a number 1-8')
+    if (answerSix == correctAnswerCount) { // I'm checking if their answer is the correctAnswerCount that incremented each correct answer
+      alert ('You kept track too! Good job!'); // congratulations for keeping track of a random number
+      correctAnswerCount++;
+      guessCount+2;
+      console.log(guessCount);
+      break;
+    } else if (answerSix > correctAnswerCount) { // I'm checking for the upper, above the correctAnswerCount
+      alert ('Ah, too high!');
+      guessCount++;
+      console.log(guessCount);
+    } else if (answerSix < correctAnswerCount) { // this is the catch for the lower end (the only numerical value that still remains)
+      alert ('You underestimated your skill ' + userName + '!');
+      guessCount++;
+      console.log(guessCount);
+    }
+  }
+}
+
+userCorrect();
+
 
 // alert("Alright, moving on!")
 
