@@ -137,30 +137,32 @@ function userCorrect(){
 
 userCorrect();
 
+alert("Alright, moving on!");
 
-// alert("Alright, moving on!")
+remainingGuesses = 4 - 0; // TODO: what happens if I don't run this here? TODO: CHANGED correctAnswerCount to 
+correctAnswerCount = 6 // TODO: comment this out!
 
-// remainingGuesses = 4 - 0; // TODO: what happens if I don't run this here? TODO: CHANGED correctAnswerCount to 
-// correctAnswerCount = 6 // TODO: comment this out!
+function guessCountry(){
+  while (guessCount < 6) {
+    console.log('Remaining guesses: ' + remainingGuesses)
+    answerSix = prompt('Which countries did I go to for my work?', 'You have ' + 6 + ' guesses!').toLowerCase(); //TODO: add back remainingGuesses
+    if (answerSix == myLocations[0] || answerSix == myLocations[1] || answerSix == myLocations[4]){
+      alert('Yes! I love a little puddle jumping!');
+      correctAnswerCount++;
+      break;
+    } else if (answerSix == myLocations[2] || answerSix == myLocations[3]){
+      alert('Correct! I\'ve been to both of our land-connected neighbors!');
+      correctAnswerCount++;
+      break;
+    } else {
+      guessCount++;
+      remainingGuesses = correctAnswerCount - guessCount; // TODO: And why is this code important here?
+      // alert('Keep guessing, you\'ll get there!  You have ' + remainingGuesses + ' guesses remaining.')
+    }
+  }
+}
 
-
-// while (guessCount < 6) {
-//   console.log('Remaining guesses: ' + remainingGuesses)
-//   answerSix = prompt('Which countries did I go to for my work?', 'You have ' + 6 + ' guesses!').toLowerCase(); //TODO: add back remainingGuesses
-//   if (answerSix == myLocations[0] || answerSix == myLocations[1] || answerSix == myLocations[4]){
-//     alert('Yes! I love a little puddle jumping!');
-//     correctAnswerCount++;
-//     break;
-//   } else if (answerSix == myLocations[2] || answerSix == myLocations[3]){
-//     alert('Correct! I\'ve been to both of our land-connected neighbors!');
-//     correctAnswerCount++;
-//     break;
-//   } else {
-//     guessCount++;
-//     remainingGuesses = correctAnswerCount - guessCount; // TODO: And why is this code important here?
-//     // alert('Keep guessing, you\'ll get there!  You have ' + remainingGuesses + ' guesses remaining.')
-//   }
-// }
+guessCountry();
 
 // alert('Okay, here are all I\'ve been to:')
 
