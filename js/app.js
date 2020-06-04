@@ -68,27 +68,35 @@ function getAnswerTwo(){
 
 getAnswerTwo();
 
+function getAnswerThree(){
+  answerThree = prompt ('Was there any mention of pets in the bio?')
+  console.log ('Here\'s answerThree\'s raw input: ' + answerThree + '. Prior to letter capitalization');
+  answerThree = answerThree.charAt(0).toUpperCase() + answerThree.slice(1);
+  if (answerThree == 'N' || answerThree == 'No') {
+    correctAnswerCount++; // do you need a semicolon or not?
+    console.log (correctAnswerCount + ', that\'s one more than before.')
+    alert ('True, but we did have pets always, lots of barks, meows, and some neighs even!');
+  } else {
+    alert ('Ah! While we had pets, I never mentioned them.')
+  }
+}
 
-// answerThree = prompt ('Was there any mention of pets in the bio?')
-// console.log ('Here\'s answerThree\'s raw input: ' + answerThree + '. Prior to letter capitalization');
-// answerThree = answerThree.charAt(0).toUpperCase() + answerThree.slice(1);
-// if (answerThree == 'N' || answerThree == 'No') {
-//   correctAnswerCount++; // do you need a semicolon or not?
-//   console.log (correctAnswerCount + ', that\'s one more than before.')
-//   alert ('True, but we did have pets always, lots of barks, meows, and some neighs even!');
-// } else {
-//   alert ('Ah! While we had pets, I never mentioned them.')
-// }
-// answerFour = prompt ('Did I meet my wife Idaho?')
-// answerFour = answerFour.charAt(0).toUpperCase() + answerFour.slice(1);
-// console.log ('After uppercase-ing answerFour, it looks like ' + answerFour)
-// if (answerFour == 'Y' || answerFour == 'Yes') {
-//   correctAnswerCount++
-//   alert('I did! But not before frightening her terribly.')
-//   console.log (correctAnswerCount + ' is now at it\'s highest number it can be this runthrough.')
-// } else {
-//   alert('Naw, Idaho was the place.')
-// }
+getAnswerThree();
+
+  // answerFour = prompt ('Did I meet my wife Idaho?')
+  // answerFour = answerFour.charAt(0).toUpperCase() + answerFour.slice(1);
+  // console.log ('After uppercase-ing answerFour, it looks like ' + answerFour)
+  // if (answerFour == 'Y' || answerFour == 'Yes') {
+  //   correctAnswerCount++
+  //   alert('I did! But not before frightening her terribly.')
+  //   console.log (correctAnswerCount + ' is now at it\'s highest number it can be this runthrough.')
+  // } else {
+  //   alert('Naw, Idaho was the place.')
+  // }
+
+
+
+
 
 // answerFive = prompt ("Did my career take me to far away places?")
 // answerFive = answerFive.charAt(0).toUpperCase() + answerFive.slice(1)
