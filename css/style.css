@@ -71,3 +71,13 @@ img {
 li {
   font-weight: 900;
 }
+#movies, #movieList, #work{
+  float: left;
+  margin-left: 25px;
+
+
+
+}
+#education  {
+  float: left;
+}
