@@ -34,19 +34,25 @@ function getName(){
   alert ('Well ' + userName + ' thank you for stopping by.')
 }
 
-getName()
+getName();
 
-// answerOne = prompt ('Was I born before Star Wars premiered?', '(Hint: Star Wars first showed in theaters in 1977)')
-// console.log (answerOne + ' is the raw input'); // just to see the method() working in the next step of code
-// answerOne = answerOne.charAt(0).toUpperCase() + answerOne.slice(1); // takes the first letter and Capitalizes it, then concatenates the rest of the sentence back in from the second character on because slices like arrays start at 0. This code snippet was found at https://attacomsian.com/blog/string-capitalize-javascript on 2020-06-02
-// console.log (answerOne + ' is now be Capitalized. This is answerOne.')
-// if (answerOne == 'N' || answerOne == "No") { // checking for the relevant response
-//   alert ('You are correct!'); // if you got the correct answer, you're told so.
-//   correctAnswerCount++ // this keeps the correct track of how many questions you get correct.
-//   console.log('the correctAnswerCount is ' + correctAnswerCount + '.') // here so that I can check that the correct answer counter works
-// } else { // wrong answer, stating as much. Also, no increment for the correctAnswerCount.
-//   alert ('Nope! I did see them in theater for their 20 year anniversary special editions however.')
-// }
+function getAnswerOne(){
+  answerOne = prompt ('Was I born before Star Wars premiered?', '(Hint: Star Wars first showed in theaters in 1977)')
+  console.log (answerOne + ' is the raw input'); // just to see the method() working in the next step of code
+  answerOne = answerOne.charAt(0).toUpperCase() + answerOne.slice(1); // takes the first letter and Capitalizes it, then concatenates the rest of the sentence back in from the second character on because slices like arrays start at 0. This code snippet was found at https://attacomsian.com/blog/string-capitalize-javascript on 2020-06-02
+  console.log (answerOne + ' is now be Capitalized. This is answerOne.')
+  if (answerOne == 'N' || answerOne == "No") { // checking for the relevant response
+    alert ('You are correct!'); // if you got the correct answer, you're told so.
+    correctAnswerCount++ // this keeps the correct track of how many questions you get correct.
+    console.log('the correctAnswerCount is ' + correctAnswerCount + '.') // here so that I can check that the correct answer counter works
+  } else { // wrong answer, stating as much. Also, no increment for the correctAnswerCount.
+    alert ('Nope! I did see them in theater for their 20 year anniversary special editions however.')
+  }
+}
+
+getAnswerOne();
+
+
 // answerTwo = prompt ('Did I live in Germany before moving to Washington state?', 'When the wall fell, I was there!');
 // console.log (answerTwo + ' is the raw input for answerTwo'); // just to see the method() working in the next step of code
 // answerTwo = answerTwo.charAt(0).toUpperCase() + answerTwo.slice(1);
