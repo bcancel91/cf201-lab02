@@ -164,10 +164,14 @@ function guessCountry(){
 
 guessCountry();
 
-// alert('Okay, here are all I\'ve been to:')
+alert('Okay, here are all I\'ve been to:');
 
-// for (var i = 0; i < myLocations.length; i++){
-//   alert('I have been to ' + myLocations[i].charAt(0).toUpperCase() + myLocations[i].slice(1) + '.')
-// }
+function myCountries(){
+  for (var i = 0; i < myLocations.length; i++){
+    alert('I have been to ' + myLocations[i].charAt(0).toUpperCase() + myLocations[i].slice(1) + '.')
+  }
+}
 
-// alert('And that\'s the game! We\'ve been great! You got ' + correctAnswerCount + ' questions correct out of 7 questions!')
+myCountries();
+
+alert('And that\'s the game! We\'ve been great! You got ' + correctAnswerCount + ' questions correct out of 7 questions!')
