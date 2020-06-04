@@ -83,17 +83,20 @@ function getAnswerThree(){
 
 getAnswerThree();
 
-  // answerFour = prompt ('Did I meet my wife Idaho?')
-  // answerFour = answerFour.charAt(0).toUpperCase() + answerFour.slice(1);
-  // console.log ('After uppercase-ing answerFour, it looks like ' + answerFour)
-  // if (answerFour == 'Y' || answerFour == 'Yes') {
-  //   correctAnswerCount++
-  //   alert('I did! But not before frightening her terribly.')
-  //   console.log (correctAnswerCount + ' is now at it\'s highest number it can be this runthrough.')
-  // } else {
-  //   alert('Naw, Idaho was the place.')
-  // }
+function getAnswerFour(){
+  answerFour = prompt ('Did I meet my wife Idaho?')
+  answerFour = answerFour.charAt(0).toUpperCase() + answerFour.slice(1);
+  console.log ('After uppercase-ing answerFour, it looks like ' + answerFour)
+  if (answerFour == 'Y' || answerFour == 'Yes') {
+    correctAnswerCount++
+    alert('I did! But not before frightening her terribly.')
+    console.log (correctAnswerCount + ' is now at it\'s highest number it can be this runthrough.')
+  } else {
+    alert('Naw, Idaho was the place.')
+  }
+}
 
+getAnswerFour();
 
 
 
