@@ -69,7 +69,7 @@ answerFour = answerFour.charAt(0).toUpperCase() + answerFour.slice(1);
 console.log ('After uppercase-ing answerFour, it looks like ' + answerFour)
 if (answerFour == 'Y' || answerFour == 'Yes') {
   correctAnswerCount++
-  alert('I did! But not after frightening her terribly.')
+  alert('I did! But not before frightening her terribly.')
   console.log (correctAnswerCount + ' is now at it\'s highest number it can be this runthrough.')
 } else {
   alert('Naw, Idaho was the place.')
@@ -85,23 +85,41 @@ if (answerFive == 'Y' || answerFive == 'Yes') {
   alert("No, I did see other parts of the world, for which I am very thankful.")
 }
 
-answerSix = prompt ('Okay ' + userName + ' how many answers did you get correct?', 'Answer with a number 1-8')
-if (answerSix == correctAnswerCount) { // I'm checking if their answer is the correctAnswerCount that incremented each correct answer
-  alert ('You kept track too! Good job!'); // congratulations for keeping track of a random number
-  correctAnswerCount++;
-} else if (answerSix > correctAnswerCount) { // I'm checking for the upper, above the correctAnswerCount
-  alert ('Ah, too high!')
-} else { // this is the catch for the lower end (the only numerical value that still remains)
-  alert ('You underestimated your skill ' + userName + '!')
+correctAnswerCount = 4
+while (guessCount <= correctAnswerCount) {
+  answerSix = prompt ('Okay ' + userName + ' how many answers did you get correct?', 'Answer with a number 1-8')
+  if (answerSix == correctAnswerCount) { // I'm checking if their answer is the correctAnswerCount that incremented each correct answer
+    alert ('You kept track too! Good job!'); // congratulations for keeping track of a random number
+    correctAnswerCount++;
+    guessCount+2;
+    console.log(guessCount);
+    break;
+  } else if (answerSix > correctAnswerCount) { // I'm checking for the upper, above the correctAnswerCount
+    alert ('Ah, too high!');
+    guessCount++;
+    console.log(guessCount);
+  } else if (answerSix < correctAnswerCount) { // this is the catch for the lower end (the only numerical value that still remains)
+    alert ('You underestimated your skill ' + userName + '!');
+    guessCount++;
+    console.log(guessCount);
+  }
 }
 
-remainingGuesses = correctAnswerCount - guessCount; // TODO: what happens if I don't run this here?
+alert("Alright, moving on!")
 
-while (guessCount < correctAnswerCount) {
+remainingGuesses = 4 - 0; // TODO: what happens if I don't run this here? TODO: CHANGED correctAnswerCount to 
+correctAnswerCount = 6 // TODO: comment this out!
+
+
+while (guessCount < 6) {
   console.log('Remaining guesses: ' + remainingGuesses)
-  answerSix = prompt('Which countries did I go to for my work?', 'You have ' + remainingGuesses + ' guesses!').toLowerCase();
+  answerSix = prompt('Which countries did I go to for my work?', 'You have ' + 6 + ' guesses!').toLowerCase(); //TODO: add back remainingGuesses
   if (answerSix == myLocations[0] || answerSix == myLocations[1] || answerSix == myLocations[4]){
     alert('Yes! I love a little puddle jumping!');
+    correctAnswerCount++;
+    break;
+  } else if (answerSix == myLocations[2] || answerSix == myLocations[3]){
+    alert('Correct! I\'ve been to both of our land-connected neighbors!');
     correctAnswerCount++;
     break;
   } else {
@@ -110,6 +128,8 @@ while (guessCount < correctAnswerCount) {
     // alert('Keep guessing, you\'ll get there!  You have ' + remainingGuesses + ' guesses remaining.')
   }
 }
+
+alert('Okay, here are all I\'ve been to:')
 
 for (var i = 0; i < myLocations.length; i++){
   alert('I have been to ' + myLocations[i].charAt(0).toUpperCase() + myLocations[i].slice(1) + '.')
