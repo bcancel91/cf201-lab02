@@ -39,7 +39,7 @@ footer {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-#movies {
+.list {
   font-family: Arial, Helvetica, sans-serif;
   display: inline-block;
   align-content: center;
