@@ -52,18 +52,23 @@ function getAnswerOne(){
 
 getAnswerOne();
 
+function getAnswerTwo(){
+  answerTwo = prompt ('Did I live in Germany before moving to Washington state?', 'When the wall fell, I was there!');
+  console.log (answerTwo + ' is the raw input for answerTwo'); // just to see the method() working in the next step of code
+  answerTwo = answerTwo.charAt(0).toUpperCase() + answerTwo.slice(1);
+  console.log (answerTwo + ' is now be Capitalized. This is answerTwo')
+  if (answerTwo == 'Y' || answerTwo == "Yes") {
+    alert ('You are correct!');
+    correctAnswerCount++
+    console.log (correctAnswerCount + ' the count is now plus one.') //I did move around the alert/increment/console.log on purpose to see it respond differently.
+  } else {
+    alert ('Incorrect. I\'m no Berliner!')
+  }
+}
 
-// answerTwo = prompt ('Did I live in Germany before moving to Washington state?', 'When the wall fell, I was there!');
-// console.log (answerTwo + ' is the raw input for answerTwo'); // just to see the method() working in the next step of code
-// answerTwo = answerTwo.charAt(0).toUpperCase() + answerTwo.slice(1);
-// console.log (answerTwo + ' is now be Capitalized. This is answerTwo')
-// if (answerTwo == 'Y' || answerTwo == "Yes") {
-//   alert ('You are correct!');
-//   correctAnswerCount++
-//   console.log (correctAnswerCount + ' the count is now plus one.') //I did move around the alert/increment/console.log on purpose to see it respond differently.
-// } else {
-//   alert ('Incorrect. I\'m no Berliner!')
-// }
+getAnswerTwo();
+
+
 // answerThree = prompt ('Was there any mention of pets in the bio?')
 // console.log ('Here\'s answerThree\'s raw input: ' + answerThree + '. Prior to letter capitalization');
 // answerThree = answerThree.charAt(0).toUpperCase() + answerThree.slice(1);
