@@ -98,18 +98,19 @@ function getAnswerFour(){
 
 getAnswerFour();
 
+function getAnswerFive(){
+  answerFive = prompt ("Did my career take me to far away places?")
+  answerFive = answerFive.charAt(0).toUpperCase() + answerFive.slice(1)
+  if (answerFive == 'Y' || answerFive == 'Yes') {
+    correctAnswerCount++
+    console.log ('correctAnswerCount is ' + correctAnswerCount + '.');
+    alert('Correct!')
+  } else {
+    alert("No, I did see other parts of the world, for which I am very thankful.")
+  }
+}
 
-
-
-// answerFive = prompt ("Did my career take me to far away places?")
-// answerFive = answerFive.charAt(0).toUpperCase() + answerFive.slice(1)
-// if (answerFive == 'Y' || answerFive == 'Yes') {
-//   correctAnswerCount++
-//   console.log ('correctAnswerCount is ' + correctAnswerCount + '.');
-//   alert('Correct!')
-// } else {
-//   alert("No, I did see other parts of the world, for which I am very thankful.")
-// }
+getAnswerFive();
 
 // correctAnswerCount = 4
 // while (guessCount <= correctAnswerCount) {
